@@ -1,0 +1,33 @@
+{
+  "name": "MOMENTO",
+  "short_name": "MOMENTO",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#89986D",
+  "theme_color": "#D4D6AE",
+  "icons": [
+    {
+      "src": "assets/img/192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/img/screenshot1.png",
+      "sizes": "432x783",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/screenshot2.png",
+      "sizes": "1919x962",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}

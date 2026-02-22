@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/Roboto-Regular.ttf") format("ttf"),
+       url("../font/Roboto-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+body{
+    font-family: "Roboto", Arial, sans-serif;
+    background-color: rgb(137, 152, 109);
+    font-size: 25px;
+}
+
+header{
+    background-color: rgb(156, 171, 132);
+    border-radius: 15px;
+    display:flex;
+    justify-content: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h1{
+    color: rgb(246, 240, 215);
+    font-weight: 1000;
+    font-size: 55px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display:none;
+}
+
+.overlay-content {
+    background-color: #d4d6ae;
+    padding: 20px;
+    border-radius: 15px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input{
+    background-color: #d4d6ae;
+    border: none;
+    border-bottom: 1px solid #313131; 
+    font-size: 25px;
+}
+
+ input[type=checkbox] {
+  accent-color: rgb(137, 152, 109);
+  width: 25px;
+  height: 25px;
+}
+
+button{
+    background-color: rgb(137, 152, 109);
+    color: rgb(246, 240, 215);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.addButton{
+    background-color: rgb(132, 172, 202) !important;
+}
+
+.backButton{
+    background-color: rgb(202, 132, 132) !important;
+
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.photobooth-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#video {
+    width: 350px;
+    height: 350px;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+#countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 64px;
+    font-weight: bold;
+    color: rgb(212, 214, 174);
+    text-align: center;
+    pointer-events: none;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}

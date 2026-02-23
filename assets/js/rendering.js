@@ -22,20 +22,18 @@ function applyFullWidthEveryFourth(mainContent) {
     }
 }
 
-function renderLoveBox2(){
+function renderLoveBox2() {
     const mainContent = document.getElementById('mainContent');
     mainContent.innerHTML += elementBackButtonTemplate();
 
     let backButton = document.getElementById('backButton');
     backButton.classList.add('full-width');
 
-    const targetDate = new Date('2025-11-28');
+    const startDate = new Date('2025-11-28');
+
     mainContent.innerHTML += elementNormalTemplate('28.11.25 🫶🏻');
 
-    const today = new Date();
-    const diffTime = targetDate - today;
-    const diffDays = Math.abs(Math.ceil((targetDate - today) / (1000 * 60 * 60 * 24)));
-    mainContent.innerHTML += elementNormalTemplate(`${diffDays} Tage 📆`);
+    mainContent.innerHTML += elementNormalTemplate('<span id="relationshipCounter" class="full-width"></span>');
 
     mainContent.innerHTML += elementNormalTemplate('3.11.25 Erstes Date 👫🏼' + iframeTemplate());
     const elements = mainContent.querySelectorAll('.element');
@@ -54,7 +52,7 @@ function renderLoveBox2(){
 
     mainContent.innerHTML += elementNormalTemplate(`
     7.12.25 Nini Eltern 🍫`);
- 
+
     mainContent.innerHTML += elementNormalTemplate(`
     13.12.25 Chrisi Eltern 💐`);
 
@@ -69,6 +67,42 @@ function renderLoveBox2(){
     const elements2 = mainContent.querySelectorAll('.element');
     const lastElement2 = elements2[elements2.length - 1];
     lastElement2.classList.add('full-width');
+
+    // --- Live-Beziehungs-Zähler ---
+    const units = ['Tage', 'Wochen', 'Stunden', 'Minuten'];
+    let index = 0;
+    const counter = document.getElementById('relationshipCounter');
+
+    function updateRelationshipCounter() {
+        const now = new Date();
+        const diffMs = now - startDate;
+
+        let text = '';
+        switch (units[index]) {
+            case 'Tage':
+                const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+                text = `${days} Tage 💓`;
+                break;
+            case 'Wochen':
+                const weeks = Math.floor(diffMs / (1000 * 60 * 60 * 24 * 7));
+                text = `${weeks} Wochen 💓`;
+                break;
+            case 'Stunden':
+                const hours = Math.floor(diffMs / (1000 * 60 * 60));
+                text = `${hours} Stunden 💓`;
+                break;
+            case 'Minuten':
+                const minutes = Math.floor(diffMs / (1000 * 60));
+                text = `${minutes} Minuten 💓`;
+                break;
+        }
+
+        counter.textContent = text;
+        index = (index + 1) % units.length;
+    }
+
+    updateRelationshipCounter();
+    setInterval(updateRelationshipCounter, 2000);
 }
 
 function renderPhotobooth(){

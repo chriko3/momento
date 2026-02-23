@@ -2,7 +2,7 @@
   "name": "MOMENTO",
   "short_name": "MOMENTO",
   "start_url": ".",
-  "display": "standalone",
+  "display": "fullscreen",
   "background_color": "#89986D",
   "theme_color": "#D4D6AE",
   "icons": [

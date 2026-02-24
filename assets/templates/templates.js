@@ -22,7 +22,27 @@ function elementBackButtonTemplate(){
     <div class='element backButton' id='backButton' onclick='goHome()'>
     Zurück 🔙
     </div>`;
-}  
+} 
+
+function overlayTemplate(){
+    return `
+    <div class="overlay" id="overlay">
+        <div class="overlay-content">
+            <input id="input" type="text" 
+                placeholder="Date Idee eingeben" 
+                autocomplete="off" 
+                autocorrect="off"
+                spellcheck="false">
+            <div>
+                <button onclick="addDateIdeaToDB('dateIdea')">Speichern</button>
+                <button onclick="closeAddNewDate()">Abbrechen</button>
+            </div>
+            <div>
+                <input type="checkbox" id="checkbox" checked> Random Emoji
+            </div>
+        </div>
+    </div>`;
+}
 
 function iframeTemplate(){
     return`

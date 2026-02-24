@@ -23,7 +23,20 @@ function loadPhotobooth(){
 
 function openAddNewDate() {
     let overlay = document.getElementById('overlay');
+
+    if (!overlay) {
+        document.body.insertAdjacentHTML('beforeend', overlayTemplate());
+        overlay = document.getElementById('overlay');
+    }
+
     overlay.style.display = 'flex';
+
+    const input = document.getElementById('input');
+    if (input) {
+        setTimeout(() => {
+            input.focus();
+        }, 30);
+    }
 }
 
 function closeAddNewDate() {

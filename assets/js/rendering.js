@@ -41,13 +41,13 @@ function renderLoveBox2() {
     lastElement.classList.add('full-width');
 
     mainContent.innerHTML += elementNormalTemplate(`
-    6.11.25 Kino Good fortune 🎥
+    6.11.25 Erstes mal Kino 🎥
     <img src="assets/img/kino.png" alt="Kino" class="">
     `);
 
     mainContent.innerHTML += elementNormalTemplate(`
     10.11.25 Erster Kuss 😘
-    <img src="assets/img/smarties.png" alt="Kino" class="">
+    <img src="assets/img/smarties.png" alt="Smarties" class="">
     `);
 
     mainContent.innerHTML += elementNormalTemplate(`
@@ -57,18 +57,27 @@ function renderLoveBox2() {
     13.12.25 Chrisi Eltern 💐`);
 
     mainContent.innerHTML += elementNormalTemplate(`
+    13.12.25 Gemeinsam gekocht 🍽️ 
+    <img src="assets/img/food.png" alt="Essen" class="">
+    `);
+    const elements3 = mainContent.querySelectorAll('.element');
+    const lastElement3 = elements3[elements3.length - 1];
+    lastElement3.classList.add('full-width');
+
+    mainContent.innerHTML += elementNormalTemplate(`
     1.1.26 Silvesterkuss 🎉`);
 
     mainContent.innerHTML += elementNormalTemplate(`
     14.02.26 El Picoso 🌵`);
 
     mainContent.innerHTML += elementNormalTemplate(`
-    Viele weitere gemeinsame Momente warten auf uns 🌟`);
+    Viele weitere gemeinsame Momente warten auf uns 🌟
+    <img src="assets/img/us.png" alt="Wir" class="">
+    `);
     const elements2 = mainContent.querySelectorAll('.element');
     const lastElement2 = elements2[elements2.length - 1];
     lastElement2.classList.add('full-width');
 
-    // --- Live-Beziehungs-Zähler ---
     const units = ['Tage', 'Wochen', 'Stunden', 'Minuten'];
     let index = 0;
     const counter = document.getElementById('relationshipCounter');
@@ -102,7 +111,7 @@ function renderLoveBox2() {
     }
 
     updateRelationshipCounter();
-    setInterval(updateRelationshipCounter, 2000);
+    setInterval(updateRelationshipCounter, 1500);
 }
 
 function renderPhotobooth(){

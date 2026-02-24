@@ -57,7 +57,7 @@ function renderLoveBox2() {
     13.12.25 Chrisi Eltern 💐`);
 
     mainContent.innerHTML += elementNormalTemplate(`
-    13.12.25 Gemeinsam gekocht 🍽️ 
+    29.12.25 Gemeinsam gekocht 🍽️ 
     <img src="assets/img/food.png" alt="Essen" class="">
     `);
     const elements3 = mainContent.querySelectorAll('.element');

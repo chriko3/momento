@@ -53,6 +53,7 @@ h1{
     align-items: center;
     flex-direction: column;
     gap: 10px;
+    transform: translateY(-70px);
 }
 
 input{

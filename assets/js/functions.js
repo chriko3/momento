@@ -53,19 +53,3 @@ function addRandomEmoji(text) {
         return text;
     }
 }
-
-let lastBackPress = 0;
-history.pushState({ app: true }, "");
-
-window.addEventListener("popstate", () => {
-  const now = Date.now();
-
-  if (now - lastBackPress < 2000) {
-    history.back();
-    return;
-  }
-
-  lastBackPress = now;
-  showToast("Zum Beenden erneut drücken");
-  history.pushState({ app: true }, "");
-});

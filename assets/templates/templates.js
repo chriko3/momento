@@ -34,8 +34,8 @@ function overlayTemplate(){
                 autocorrect="off"
                 spellcheck="false">
             <div>
-                <button onclick="addDateIdeaToDB('dateIdea')">Speichern</button>
                 <button onclick="closeAddNewDate()">Abbrechen</button>
+                <button onclick="addDateIdeaToDB('dateIdea')">Speichern</button>
             </div>
             <div>
                 <input type="checkbox" id="checkbox" checked> Random Emoji

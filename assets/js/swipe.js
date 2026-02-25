@@ -1,5 +1,7 @@
 function enableSwipeToDelete() {
-    const elements = document.querySelectorAll('.element:not(.addButton)');
+    const elements = document.querySelectorAll(
+        '.element:not(.addButton):not(.backButton)'
+    );
 
     elements.forEach(el => {
         const key = el.dataset.key;

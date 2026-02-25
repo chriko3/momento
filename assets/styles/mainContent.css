@@ -45,6 +45,7 @@
     width: 200px;
     display: block;
     margin: 10px auto 0;
+    filter:drop-shadow(10px 10px 10px rgb(31,31,31));
 }
 
 .settings{

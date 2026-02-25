@@ -52,3 +52,21 @@
     width: 100%;
     height: 100px;
 }
+
+.noInternetOverlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    display:none;
+}
+
+.noInternetOverlay p{
+    color: rgb(243, 243, 243);
+    padding: 20px;
+    background-color: rgb(137, 152, 109);
+    border-radius: 15px;
+}

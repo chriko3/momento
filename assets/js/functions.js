@@ -66,3 +66,13 @@ function addRandomEmoji(text) {
         return text;
     }
 }
+
+function checkInternetConnection(){
+    const noInternetOverlay = document.getElementById('noInternetOverlay'); // außerhalb von if
+
+    if (!navigator.onLine) {
+        noInternetOverlay.style.display = 'flex';
+    } else {
+        noInternetOverlay.style.display = 'none';
+    }
+}

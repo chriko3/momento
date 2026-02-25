@@ -22,7 +22,7 @@ function elementBackButtonTemplate(){
     <div class='element backButton' id='backButton' onclick='goHome()'>
     Zurück 🔙
     </div>`;
-} 
+}
 
 function overlayTemplate(){
     return `

@@ -20,7 +20,7 @@
 
     
 </head>
-<body id="body">
+<body id="body" onload="checkInternetConnection()">
 <header>
     <h1>MOMENTO<br> 💖📸</h1>
 </header>
@@ -29,18 +29,19 @@
     <div class="element" onclick="loadDateIdeas()">
         Date Ideen 💐
     </div>
-
     <div class="element" onclick="openSpotify()">
         Spotify ✨
     </div>
-
     <div class="element" onclick="loadLoveBox2()">
         LoveBox 2.0 📦
     </div>
-
     <div class="element" onclick="loadPhotobooth()">
         Photobooth 📸
     </div>
+</div>
+
+ <div class="noInternetOverlay" id="noInternetOverlay">
+    <p>Kein Internet :/</p>
 </div>
     
 </body>
